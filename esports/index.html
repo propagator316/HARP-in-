@@ -14,19 +14,16 @@
             box-sizing: border-box;
         }
 
-        /* * eSports 테마 (Dark Mode - 보라색 계열)
-         * Main Purple: #6A0DAD (Poster Main)
-         * Light Purple: #9370DB (Poster Light)
-         * Accent Gold: #FFD700 (Poster Gold - for specific highlights)
-         * Backgrounds: #210A38 (Body - Darker Purple)
-         * Container: #3A1B5E (Slightly Lighter Purple)
-         * Inner elements: #4F2F7A (Even Lighter Purple)
+        /* * eSports 테마 (Dark Mode)
+         * Accent Color 1 (Gold): #F9A825
+         * Accent Color 2 (Bright Blue): #00BFFF
+         * Backgrounds: #12121e (Body), #1e1e2f (Container), #2a2a4e (Inner elements)
          * Text: #e0e0e0 (Main), #FFFFFF (Strong)
         */
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #210A38; /* Darker purple */
+            background-color: #12121e;
             color: #e0e0e0;
             line-height: 1.7;
             padding: 20px;
@@ -36,7 +33,7 @@
         .container {
             max-width: 900px;
             margin: 20px auto;
-            background-color: #3A1B5E; /* Slightly lighter purple */
+            background-color: #1e1e2f;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
             overflow: hidden; /* for border-radius */
@@ -44,21 +41,11 @@
 
         /* 헤더 (대회 제목) */
         header {
-            padding: 40px 20px; /* Adjust padding for image */
+            padding: 40px;
             text-align: center;
-            border-bottom: 4px solid #FFD700; /* Gold accent */
-            background-color: #6A0DAD; /* Poster Main Purple */
-            position: relative;
-            z-index: 1; /* Ensure text is above background image if used */
-        }
-
-        header img.poster-banner {
-            max-width: 100%; /* Make image responsive */
-            height: auto;
-            display: block; /* Remove extra space below image */
-            margin: 0 auto; /* Center the image */
-            border-radius: 8px; /* Slightly rounded corners for the image */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            border-bottom: 4px solid #F9A825;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/900x200/333/888?text=eSports+Banner+Image') no-repeat center center; /* (이미지 태그 대신 배너 예시) */
+            background-size: cover;
         }
 
         header h1 {
@@ -66,19 +53,24 @@
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 10px;
-            display: none; /* 포스터 이미지로 대체되었으므로 숨김 */
         }
 
+        /* 'BrighterDay' 특별 스타일 */
         header h1 span {
-            display: none; /* 포스터 이미지로 대체되었으므로 숨김 */
+            display: block;
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #F9A825; /* Accent Color 1 */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
         }
 
         header h2 {
             font-size: 1.5em;
             font-weight: 700;
-            color: #FFD700; /* Gold accent for the briefing title */
+            color: #e0e0e0;
             margin-top: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         /* 메인 콘텐츠 영역 */
@@ -100,21 +92,20 @@
         h3 {
             font-size: 1.8em;
             font-weight: 900;
-            color: #210A38; /* Darker purple for text contrast */
-            background-color: #FFD700; /* Gold accent */
+            color: #12121e;
+            background-color: #F9A825; /* Accent Color 1 */
             padding: 12px 20px;
             border-radius: 8px;
             margin-bottom: 20px;
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* 소제목 (예시, 대진표 등) */
         h4 {
             font-size: 1.3em;
             font-weight: 700;
-            color: #9370DB; /* Light purple accent */
-            border-left: 4px solid #9370DB;
+            color: #00BFFF; /* Accent Color 2 */
+            border-left: 4px solid #00BFFF;
             padding-left: 12px;
             margin-top: 25px;
             margin-bottom: 15px;
@@ -138,7 +129,7 @@
 
         li li {
             font-size: 0.95em;
-            color: #cccccc;
+            color: #bbbbbb;
         }
 
         strong {
@@ -148,13 +139,12 @@
 
         /* 점수 계산 예시 박스 */
         .example {
-            background-color: #4F2F7A; /* Inner element purple */
-            border: 1px solid #5F3F8A;
-            border-left: 6px solid #9370DB; /* Light purple accent */
+            background-color: #2a2a4e;
+            border: 1px solid #3a3a5e;
+            border-left: 6px solid #00BFFF; /* Accent Color 2 */
             padding: 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .example h4 {
@@ -173,7 +163,7 @@
             width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
-            background-color: #4F2F7A; /* Inner element purple */
+            background-color: #2a2a4e;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             border-radius: 8px;
             overflow: hidden; /* for border-radius */
@@ -182,32 +172,32 @@
         th, td {
             padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #5F3F8A;
+            border-bottom: 1px solid #3a3a5e;
         }
 
         /* 테이블 헤더 */
         thead tr {
-            background-color: #FFD700; /* Gold accent */
+            background-color: #F9A825; /* Accent Color 1 */
         }
 
         th {
             font-size: 1.1em;
             font-weight: 700;
-            color: #210A38; /* Darker purple for text contrast */
+            color: #12121e;
         }
 
         /* 테이블 짝수 행 */
         tbody tr:nth-child(even) {
-            background-color: #5F3F8A; /* Slightly different purple for contrast */
+            background-color: #3a3a5e;
         }
         
         tbody tr:hover {
-            background-color: #6A4A9A; /* Lighter on hover */
+            background-color: #4a4a6e;
         }
 
         /* (공백) 셀 스타일 */
         td:contains("(공백)") {
-            color: #aaa;
+            color: #777;
             font-style: italic;
         }
 
@@ -216,8 +206,8 @@
             text-align: center;
             padding: 30px;
             font-size: 0.9em;
-            color: #bbbbbb;
-            border-top: 1px solid #4F2F7A;
+            color: #888;
+            border-top: 1px solid #3a3a5e;
             margin-top: 20px;
         }
     </style>
@@ -227,8 +217,9 @@
     <div class="container">
 
         <header>
-           
-        
+            <h1>제 2회 교회학교전국 연합회 e스포츠 대회<br>
+                <span>BrighterDay</span>
+            </h1>
             <h2>2025 브롤스타즈 e스포츠 대회 브리핑</h2>
         </header>
         <main>
@@ -385,6 +376,6 @@
         <footer>
             <p>&copy; 2025 교회학교전국 연합회. All rights reserved.</p>
         </footer>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
