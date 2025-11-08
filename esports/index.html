@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 브롤스타즈 e스포츠 대회 오전 최종 브리핑</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* * eSports 테마 (Dark Mode - 보라색 계열)
+         * Main Purple: #6A0DAD (Poster Main)
+         * Light Purple: #9370DB (Poster Light)
+         * Accent Gold: #FFD700 (Poster Gold - for specific highlights)
+         * Backgrounds: #210A38 (Body - Darker Purple)
+         * Container: #3A1B5E (Slightly Lighter Purple)
+         * Inner elements: #4F2F7A (Even Lighter Purple)
+         * Text: #e0e0e0 (Main), #FFFFFF (Strong)
+        */
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #210A38; /* Darker purple */
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        /* 전체 콘텐츠를 감싸는 컨테이너 */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #3A1B5E; /* Slightly lighter purple */
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            overflow: hidden; /* for border-radius */
+        }
+
+        /* 헤더 (대회 제목) */
+        header {
+            padding: 40px 20px; /* Adjust padding for image */
+            text-align: center;
+            border-bottom: 4px solid #FFD700; /* Gold accent */
+            background-color: #6A0DAD; /* Poster Main Purple */
+            position: relative;
+            z-index: 1; /* Ensure text is above background image if used */
+        }
+
+        header img.poster-banner {
+            max-width: 100%; /* Make image responsive */
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin: 0 auto; /* Center the image */
+            border-radius: 8px; /* Slightly rounded corners for the image */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: none; /* 포스터 이미지로 대체되었으므로 숨김 */
+        }
+
+        header h1 span {
+            display: none; /* 포스터 이미지로 대체되었으므로 숨김 */
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #FFD700; /* Gold accent for the briefing title */
+            margin-top: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* 메인 콘텐츠 영역 */
+        main {
+            padding: 30px 40px;
+        }
+
+        /* 본문 단락 */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* 섹션 구분 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* 섹션 제목 (1., 2., 3. ...) */
+        h3 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #210A38; /* Darker purple for text contrast */
+            background-color: #FFD700; /* Gold accent */
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 소제목 (예시, 대진표 등) */
+        h4 {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #9370DB; /* Light purple accent */
+            border-left: 4px solid #9370DB;
+            padding-left: 12px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* 리스트 (ul, ol) */
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* 중첩 리스트 (모드 설명) */
+        ul ul, ol ol {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        li li {
+            font-size: 0.95em;
+            color: #cccccc;
+        }
+
+        strong {
+            color: #ffffff; /* 강조 텍스트 */
+            font-weight: 700;
+        }
+
+        /* 점수 계산 예시 박스 */
+        .example {
+            background-color: #4F2F7A; /* Inner element purple */
+            border: 1px solid #5F3F8A;
+            border-left: 6px solid #9370DB; /* Light purple accent */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .example h4 {
+            margin-top: 0;
+            color: #FFFFFF; /* 예시 제목은 흰색으로 */
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .example ul {
+            margin-bottom: 0;
+        }
+        
+        /* 일정표 테이블 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #4F2F7A; /* Inner element purple */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden; /* for border-radius */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #5F3F8A;
+        }
+
+        /* 테이블 헤더 */
+        thead tr {
+            background-color: #FFD700; /* Gold accent */
+        }
+
+        th {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #210A38; /* Darker purple for text contrast */
+        }
+
+        /* 테이블 짝수 행 */
+        tbody tr:nth-child(even) {
+            background-color: #5F3F8A; /* Slightly different purple for contrast */
+        }
+        
+        tbody tr:hover {
+            background-color: #6A4A9A; /* Lighter on hover */
+        }
+
+        /* (공백) 셀 스타일 */
+        td:contains("(공백)") {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+            color: #bbbbbb;
+            border-top: 1px solid #4F2F7A;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <img class="poster-banner" src="https://i.ibb.co/CmLkK2z/Kakao-Talk-20240502-145719875-01.jpg" alt="2025 브롤스타즈 e스포츠 대회 포스터">
+            
+            <h2>2025 브롤스타즈 e스포츠 대회 오전 최종 브리핑</h2>
+        </header>
+        <main>
+            <p>본선 4강 진출팀을 가리기 위한 예선전(6강 풀리그-고정포인트방식)이 진행됩니다. 경기에 앞서, 오늘 진행 방식과 경기 일정, 그리고 가장 중요한 점수 집계 방식 브리핑 드립니다.</p>
+
+            <section id="group-draw">
+                <h3>1. 그룹 추첨 및 조 편성 (A, B조)</h3>
+                <p>가장 먼저, 6팀을 3팀씩 2개 그룹(A조, B조)으로 나누는 그룹 추첨식을 진행하겠습니다.</p>
+                <p>추첨을 통해 (1팀, 2팀, 3팀)이 A조, (4팀, 5팀, 6팀)이 B조로 편성됩니다. (예시)</p>
+                <p>오늘 안내해 드리는 일정표의 A1, A2, A3/B1, B2, B3는 추첨된 팀 번호를 의미합니다.</p>
+            </section>
+
+            <section id="prelims">
+                <h3>2. 예선전(6강 풀리그) 진행 방식</h3>
+                <ul>
+                    <li><strong>방식:</strong> 각 조 3팀이 한 번씩 맞붙는 '풀리그(Round-Robin)' 방식입니다.</li>
+                    <li><strong>경기:</strong> 모든 경기는 3세트 고정 포인트 방식으로 진행됩니다.</li>
+                    <li><strong>모드:</strong> 3판 정해진 맵과 모드로 진행됩니다.
+                        <ul>
+                            <li>1라운드(1세트): 젬 그랩 (이중 곡선)</li>
+                            <li>2라운드(2세트): 브롤 볼 (핀홀 필드)</li>
+                            <li>3라운드(3세트): 녹아웃 (타오르는 불사조)</li>
+                        </ul>
+                    </li>
+                    <li><strong>진출:</strong> 각 그룹(A, B조)의 상위 2팀이 본선 4강 토너먼트에 진출합니다.</li>
+                </ul>
+            </section>
+
+            <section id="scoring">
+                <h3>3. 가장 중요한! 승점 및 순위 결정 방법</h3>
+                <p>순위는 '승점'을 기준으로 결정됩니다. 승점 계산 방식을 유의 깊게 들어주시기 바랍니다.</p>
+                
+                <h4>승점 방식</h4>
+                <ul>
+                    <li>고정포인트방식 경기 내에서, 1세트(모드)를 이길 때마다 <strong>1점</strong></li>
+                    <li>3:0 또는 2:1로 '경기(라운드)' 자체를 최종 승리하면 <strong>추가 1점</strong></li>
+                </ul>
+
+                <div class="example">
+                    <h4>예시 1 (3:0 승부)</h4>
+                    <p>A팀이 B팀을 세트 스코어 3:0으로 승리 시:</p>
+                    <ul>
+                        <li><strong>A팀:</strong> (모드승 3점) + (경기승 1점) = <strong>총 4점 획득</strong></li>
+                        <li><strong>B팀:</strong> (모드패 0점) + (경기패 0점) = <strong>총 0점 획득</strong></li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <h4>예시 2 (2:1 승부)</h4>
+                    <p>A팀이 B팀을 세트 스코어 2:1로 승리 시:</p>
+                    <ul>
+                        <li><strong>A팀:</strong> (모드승 2점) + (경기승 1점) = <strong>총 3점 획득</strong></li>
+                        <li><strong>B팀:</strong> (모드승 1점) + (경기패 0점) = <strong>총 1점 획득</strong> (1세트를 이겼기 때문)</li>
+                    </ul>
+                </div>
+
+                <h4>순위 결정 (동점 시)</h4>
+                <ol>
+                    <li><strong>1순위:</strong> 총 승점</li>
+                    <li><strong>2순위:</strong> 승점이 같을 경우, 동점 팀 간의 상호 전적(승자승)</li>
+                    <li><strong>3순위:</strong> (예외) 1팀만 승점이 높고 두 팀이 낮은 승점으로 동점일 경우, 두 팀 간의 타이브레이커(플레이오프 단판) 경기를 진행합니다.</li>
+                </ol>
+            </section>
+
+            <section id="schedule">
+                <h3>4. 경기장 배분 및 4타임 일정 (공정성 확보)</h3>
+                <p>오늘은 '본당(메인 스테이지)'과 '아래층 공간(서브 스테이지)' 두 곳에서 경기가 동시에 진행됩니다.</p>
+                <p>저희 운영진은 참가한 6팀 모두가 최소 한 번은 '본당'에서 경기를 치르는 것을 목표로 공정한 일정을 배정했습니다.</p>
+                <p>이에 따라 예선 6경기는 총 4타임으로 나뉘어 아래와 같이 진행됩니다.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>타임</th>
+                            <th>본당 (Main Stage)</th>
+                            <th>아래층 공간 (Sub Stage)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1타임</td>
+                            <td>A1 vs A2 (A조 1경기)</td>
+                            <td>B2 vs B3 (B조 1경기)</td>
+                        </tr>
+                        <tr>
+                            <td>2타임</td>
+                            <td>B1 vs B2 (B조 2경기)</td>
+                            <td>A2 vs A3 (A조 2경기)</td>
+                        </tr>
+                        <tr>
+                            <td>3타임</td>
+                            <td>A1 vs A3 (A조 3경기)</td>
+                            <td>(공백)</td>
+                        </tr>
+                        <tr>
+                            <td>4타임</td>
+                            <td>B1 vs B3 (B조 3경기)</td>
+                            <td>(공백)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>[일정 확인]</h4>
+                <ul>
+                    <li>모든 팀(A1~A3, B1~B3)은 최소 1회 이상 '본당'에서 경기를 치르게 됩니다.</li>
+                    <li>동일 시간대에 팀이 중복되어 경기를 치르는 일이 없습니다.</li>
+                    <li>가장 효율적으로 예선전을 마칠 수 있는 4타임 일정입니다.</li>
+                </ul>
+            </section>
+
+            <section id="ops">
+                <h3>5. 운영 및 기타 안내</h3>
+                <ul>
+                    <li><strong>실시간 순위 확인:</strong> 모든 경기 결과와 승점, 조별 순위는 운영진이 구글 시트를 통해 실시간으로 집계할 예정입니다.</li>
+                    <li>이 구글 시트 링크는 모든 팀 대표자분께 공유해 드릴 예정이며, 누구나 현재 순위를 투명하게 확인하실 수 있습니다.</li>
+                    <li>다음 경기를 치를 팀은 경기장 준비가 완료되는 대로 운영진의 안내에 따라 이동해 주시기 바랍니다.</li>
+                </ul>
+            </section>
+
+            <section id="tournament">
+                <h3>6. 4강 토너먼트 및 5/6위 결정전 안내</h3>
+                <p>예선전 4타임이 모두 종료되면, 각 조 1, 2위는 4강 토너먼트에, A조 3위와 B조 3위는 5/6위 결정전에 진출합니다.</p>
+                <p>4강 토너먼트부터는 경기 방식이 변경됩니다.</p>
+                <ul>
+                    <li><strong>준결승(4강) 경기:</strong> 3판 2선승제(Bo3)로 진행됩니다.</li>
+                    <li><strong>결승 및 3/4위전:</strong> 5판 3선승제(Bo5)로 진행됩니다.</li>
+                </ul>
+
+                <h4>[4강 대진표]</h4>
+                <ul>
+                    <li><strong>준결승 1경기:</strong> A Group 1위 vs B Group 2위</li>
+                    <li><strong>준결승 2경기:</strong> B Group 1위 vs A Group 2위</li>
+                </ul>
+
+                <h4>[최종 순위 결정전 진행 순서]</h4>
+                <p>4강 토너먼트가 진행되는 동안, '아래층 공간(서브 스테이지)'에서는 5/6위 결정전이 동시에 진행될 예정입니다.</p>
+                
+                <strong>'본당' (메인 스테이지):</strong>
+                <ol>
+                    <li>준결승 1경기 (A 1위 vs B 2위)</li>
+                    <li>준결승 2경기 (B 1위 vs A 2위)</li>
+                    <li>3/4위 결정전 (준결승 1경기 패자 vs 2경기 패자)</li>
+                    <li>결승전 (준결승 1경기 승자 vs 2경기 승자)</li>
+                </ol>
+
+                <strong>'아래층 공간' (서브 스테이지):</strong>
+                <ul>
+                    <li>(준결승 진행 중 대기)</li>
+                    <li><strong>5/6위 결정전 (A Group 3위 vs B Group 3위)</strong></li>
+                    <li>참고: 이 경기는 메인 스테이지에서 3/4위 결정전이 진행될 때, 동시에 진행하여 시간을 효율적으로 사용합니다. (시간적 여유가 있다면 5/6위 결정전도 위에서 진행할 수 있습니다)</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 교회학교전국 연합회. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
