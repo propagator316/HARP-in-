@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEEN Ministry - 카렌 난민 사역 후원</title>
+    <style>
+        /* 기본 & 폰트 스타일 */
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.8;
+            background-color: #ffffff; /* 요청하신 흰색 배경 */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 탐색 메뉴 (Navigation Bar) - 참조 링크 스타일 적용 */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #009241; /* KEEN 시그니처 컬러 (참조 링크) */
+            text-decoration: none;
+            padding-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            padding: 5px 0;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #009241;
+            border-bottom: 2px solid #009241;
+        }
+        
+        /* 메인 콘텐츠 컨테이너 */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 (Hero Section) */
+        header.hero {
+            background-color: #f4f4f4; /* 이미지 없을 시 배경 */
+            /* 참고: 실제 이미지를 넣으려면 아래 주석을 해제하고 경로를 넣으세요.
+              background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('your-image-path.jpg');
+              background-size: cover;
+              background-position: center;
+            */
+            padding: 80px 20px;
+            text-align: center;
+            color: #333; /* 이미지 없을 시 텍스트 컬러 */
+        }
+
+        header.hero h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+            color: #009241;
+        }
+
+        header.hero p {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+
+        /* 콘텐츠 섹션 */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #009241;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        section h2 span {
+            font-size: 0.8em;
+            color: #777;
+            font-weight: 400;
+            display: block;
+        }
+        
+        section h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* "What you can do?" 그리드 섹션 */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .support-card {
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .support-card h3 {
+            color: #009241;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        
+        .support-card.finance-card {
+            grid-column: 1 / -1; /* 재정 후원을 가장 넓게 */
+            background-color: #f7fffb;
+            border-color: #009241;
+        }
+        
+        /* CTA 버튼 */
+        .cta-button {
+            display: inline-block;
+            background-color: #009241; /* KEEN 시그니처 컬러 */
+            color: #ffffff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #007a36; /* 호버 시 더 어두운 녹색 */
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">KEEN Ministry</a>
+            <ul>
+                <li><a href="#who">Who are we?</a></li>
+                <li><a href="#what">What we do?</a></li>
+                <li><a href="#how">How we do?</a></li>
+                <li><a href="#support">Support us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        
+        <h1>KEEN Ministry</h1>
+        <p>듣고 동행하는 관계 중심의 카렌 난민 선교</p>
+    </header>
+
+    <main class="container">
+
+        <section id="who">
+            <h2>1. Who are we? <span>(우리는 누구인가?)</span></h2>
+            <p>킨미니스트리는 2009년 카렌 난민캠프 방문에서 시작된 <strong>관계 중심 선교 모임</strong>입니다. 우리는 ‘프로젝트’보다 듣고 동행하는 우정을 사역의 방식으로 삼습니다.</p>
+            <ul>
+                <li><strong>선교사:</strong> 남재형(Joshua), 이충우(Caleb), 정서영(Sam), 박세호(Seth), 박세혁(Palang) 다섯 선교사가 함께합니다.</li>
+                <li><strong>이름:</strong> 2014년 카렌 기독 지도자들의 요청으로 KEEN(Karen Equipped Embracing Nations) 이름을 받았습니다.</li>
+                <li><strong>핵심 대상:</strong> 현재 인천·김포권 카렌 다음세대(아동·청소년)를 핵심 대상으로 삼습니다.</li>
+                <li><strong>파트너십:</strong> 카렌월드와이드교회를 거점으로 미션펀드와의 파트너십을 추진합니다.</li>
+            </ul>
+        </section>
+
+        <section id="what">
+            <h2>2. What we do? <span>(우리는 어떤 일을 하는가?)</span></h2>
+            <p>한국에 정착한 카렌 이웃의 신앙공동체 형성과 생활 정착을 돕습니다. 2024년 8월, 동수역 인근에 <strong>카렌월드와이드교회(Karen Baptist Church Korea)</strong>를 개척했습니다.</p>
+            
+            <h3>교회 현황</h3>
+            <ul>
+                <li><strong>예배 인원:</strong> 주일 40–75명이 예배합니다.</li>
+                <li><strong>구성:</strong> 노동자 65%, 재정착 가정 35%로 구성됩니다.</li>
+            </ul>
+
+            <h3>주요 사역</h3>
+            <ul>
+                <li><strong>통합 운영:</strong> 주중 방과후 교육, 이중언어(한-카렌) 예배, 믿음 양육, 심리정서 돌봄, 문화교류를 통합 운영합니다.</li>
+                <li><strong>리더십 양성:</strong> 미션펀드 지원과 연계해 통번역, 리더훈련, 콘텐츠 제작 등 다음세대 리더십 양성 프로그램을 실행합니다.</li>
+            </ul>
+        </section>
+
+        <section id="how">
+            <h2>3. Who are we? <span>(우리는 무슨 일을 해왔고 어떻게 그 일을 하려고 하는가?)</span></h2>
+            
+            <h3>사역의 역사 (History)</h3>
+            <ul>
+                <li><strong>2009년:</strong> ‘Karen Project’로 소식지, 간증 공유, 장학 지원을 시작했습니다. 곧 성과 홍보보다 현장 경청과 관계 회복이 더 큰 열매를 만든다는 것을 확인했습니다.</li>
+                <li><strong>2014년:</strong> 카렌 지도자들이 KEEN 이름으로 지속 동행을 공식 요청했습니다.</li>
+                <li><strong>2015년:</strong> 한국 재정착 시작과 함께 공항 영접, 행정 통역, 정착 안내, 교회 연결을 체계화했습니다.</li>
+                <li><strong>2021년:</strong> Sam 선교사는 원주 한국OGK에서 노동 현장에 동행하며 신뢰의 다리를 놓았습니다.</li>
+                <li><strong>2022년:</strong> 홍천에 (주)홍홍이를 세워 대홍복숭아 가공·판매로 일자리를 준비했습니다.</li>
+                <li><strong>2023-2024년:</strong> 2023년 12월 인천 동수역 인근에 사역 거점 교회를 창립했고, 2024년 상반기 한국어 및 정체성 교육을 시범 운영했습니다.</li>
+            </ul>
+
+            <h3>실행 방식 및 목표 (Strategy & KPI)</h3>
+            <ul>
+                <li><strong>실행 방식:</strong> '친구 되기 → 공동 설계 → 현장 실행 → 현지 리더 세움'의 순환 구조와 가정–교회–학교 연계입니다.</li>
+                <li><strong>핵심 KPI:</strong> 상시 30명 참여, 연 5명 이상 청소년 리더 배출, 월 2건 이중언어 콘텐츠 제작, 출석률 75% 이상을 목표로 합니다.</li>
+                <li><strong>투명성:</strong> 미션펀드와 함께 프로그램 직접비 우선 집행(70% 이상), 월간 운영/회계 보고, 지정 사용 준수로 투명성과 지속가능성을 확보합니다.</li>
+            </ul>
+        </section>
+
+        <section id="support">
+            <h2>4. What you can do? <span>(당신은 어떻게 우리를 도울 수 있는가?)</span></h2>
+            
+            <div class="support-grid">
+                
+                <div class="support-card finance-card">
+                    <h3> 재정후원</h3>
+                    <p>미션펀드 제안액 <strong>총 5,000,000원</strong>이 카렌 다음세대를 위해 사용됩니다. 여러분의 후원이 안정적인 사역의 기반이 됩니다.</p>
+                    <ul>
+                        <li>교육지원비: 1,200,000원</li>
+                        <li>공간임대 및 운영: 1,000,000원</li>
+                        <li>이중언어 콘텐츠 제작: 800,000원</li>
+                        <li>통번역 및 강사비: 1,000,000원</li>
+                        <li>리더훈련 및 수련회: 1,000,000원</li>
+                    </ul>
+                    <a href="#mission-fund-link" class="cta-button">미션펀드를 통해 후원하기</a>
+                </div>
+
+                <div class="support-card">
+                    <h3> 재능기부</h3>
+                    <p>여러분의 전문성으로 다음세대를 함께 세워주세요.</p>
+                    <ul>
+                        <li>한국어/영어 교육</li>
+                        <li>통역·번역 (카렌어-한국어)</li>
+                        <li>법률·의료·회계 자문</li>
+                        <li>청소년 멘토링</li>
+                        <li>미디어 제작 (영상, 디자인)</li>
+                    </ul>
+                </div>
+
+                <div class="support-card">
+                    <h3> 기회연결</h3>
+                    <p>카렌 이웃들에게 실질적인 기회의 다리가 되어주세요.</p>
+                    <ul>
+                        <li>일자리 및 주거 정보 연계</li>
+                        <li>인턴십 기회 제공</li>
+                        <li>장학금 연결 (기업, 학교, 교회)</li>
+                    </ul>
+                </div>
+
+                <div class="support-card">
+                    <h3> 기도동역</h3>
+                    <p>사역의 가장 강력한 힘은 기도입니다. 함께 기도해주세요.</p>
+                    <ul>
+                        <li>다음세대의 정체성과 믿음 성장</li>
+                        <li>이중언어 사역자 양성</li>
+                        <li>카렌월드와이드교회의 성장</li>
+                    </ul>
+                </div>
+
+                <div class="support-card">
+                    <h3> 이야기 확장</h3>
+                    <p>카렌 이웃의 이야기를 널리 알려 환대 문화를 만들어주세요.</p>
+                    <ul>
+                        <li>교회·모임에 카렌 스토리 초청</li>
+                        <li>지역 다국적 다음세대 네트워크 동참</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KEEN Ministry. All rights reserved.</p>
+        <p>KEEN Ministry (킨미니스트리)</p>
+        <p>문의: [이메일 주소] | [연락처]</p>
+    </footer>
+
+</body>
+</html>
